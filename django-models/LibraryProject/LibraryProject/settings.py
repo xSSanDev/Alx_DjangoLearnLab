@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bookshelf.apps.BookshelfConfig',
     'relationship_app.apps.RelationshipAppConfig',
 
+
 ]
 
 MIDDLEWARE = [
