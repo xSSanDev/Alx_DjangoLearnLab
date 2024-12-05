@@ -1,0 +1,9 @@
+<!-- blog/templates/blog/profile.html -->
+{% extends 'blog/base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<h2>User Profile</h2>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}

@@ -8,4 +8,9 @@
     {{ form.as_p }}
     <button type="submit">Login</button>
 </form>
+{% if form.errors %}
+    <div class="errors">
+        {{ form.errors }}
+    </div>
+{% endif %}
 {% endblock %}
