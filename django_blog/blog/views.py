@@ -1,5 +1,6 @@
 # blog/views.py
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import CustomUserCreationForm
@@ -29,3 +30,7 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
+
+@login_required
+def profile(request):
+    return render(request, 'blog/profile.html')
